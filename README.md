@@ -36,5 +36,3 @@ A Website that helps the trainee to create a training plan, a nutritional plan, 
 https://www.figma.com/community/file/1172256984404165537
 
 
-# Figma URL :
-
