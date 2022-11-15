@@ -14,8 +14,7 @@ def register_user(request : HttpRequest):
         new_user.save()
 
         #creating the profile
-        user_profile = Profile(user=new_user, age=request.POST["age"], address=request.POST["address"])
-        user_profile.save()
+        
 
 
 
@@ -29,9 +28,9 @@ def login_user(request : HttpRequest):
         
         if user:
             login(request, user)
-            return redirect("blogApp:list_posts")
+            return redirect("plan:list_exercises")
         else:
-            msg = "User Not Found , check your credentials"
+            msg = "User Not Found"
 
     return render(request, "accounts/login.html", {"msg" : msg})
 
@@ -40,6 +39,6 @@ def logout_user(request: HttpRequest):
 
     logout(request)
 
-    return redirect("plog:list_exercises")
+    return redirect("plan:list_exercises")
 
     
