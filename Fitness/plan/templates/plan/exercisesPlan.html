@@ -1,0 +1,47 @@
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+<div class="container border">
+    <h1>Build Exercises</h1>
+
+    <form action="{% url 'plan:exercises' %}" method="POST" class="d-flex flex-column gap-2">
+       {% csrf_token %}
+       
+          <div class="form-floating">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Exercrises" name="name_exercises">
+          <label for="floatingInput">Exercrises</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="day_exercises" name="day_exercises">
+            <label for="floatingInput">Day</label>
+          </div>
+
+
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingInput" placeholder="Counts" name="counts_exercises">
+            <label for="floatingInput">Counts</label>
+          </div>
+
+        
+       
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingInput" placeholder="Sets" name="sets_exercises">
+            <label for="floatingInput">Sets</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="number" class="form-control" id="floatingInput" placeholder="Weight" name="weight_exercises">
+            <label for="floatingInput">Weight</label>
+          </div>
+
+
+        
+    
+        <button class="w-100 btn btn-lg btn-secondary"  type="submit">Enter</button>
+      </form>
+
+
+</div>
+

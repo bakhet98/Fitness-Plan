@@ -1,0 +1,31 @@
+<html><head></head><body>{% extends 'plan/base.html' %}
+
+    {% block title %}  {% endblock %}
+    
+    
+    
+    
+    {% block content %}
+    
+    <h1>Exercises List</h1>
+    
+    {% for i in exercises %}
+    
+    <div class="container">
+        
+            <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">{{i.name_exercises}}</th>
+                <th scope="col">{{i.day_exercises}}</th>
+                <th scope="col">{{i.counts_exercises}}</th>
+                <th scope="col">{{i.sets_exercises}}</th>
+                <th scope="col">{{i.weight_exercises}}</th>
+            </tr>
+            </thead>
+            
+        </table>
+    </div>
+    {% endfor %}
+    
+    {% endblock %}</body></html>
