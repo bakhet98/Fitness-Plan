@@ -1,31 +1,32 @@
-<html><head></head><body>{% extends 'plan/base.html' %}
 
-    {% block title %}  {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     
+    <div class="container border">
+        <h1>Save your meals</h1>
     
+        <form action="{% url 'plan:meal' %}" method="POST" class="d-flex flex-column gap-2">
+           {% csrf_token %}
+           
+              <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput" placeholder="meal" name="meal">
+              <label for="floatingInput">meal</label>
+              </div>
     
+           
+              <div class="form-floating">
+                <input type="number" class="form-control" id="floatingInput" placeholder="colres" name="colres">
+                <label for="floatingInput">colres</label>
+              </div>
     
-    {% block content %}
+              
     
-    <h1>Exercises List</h1>
-    
-    {% for i in exercises %}
-    
-    <div class="container">
-        
-            <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">{{i.name_exercises}}</th>
-                <th scope="col">{{i.day_exercises}}</th>
-                <th scope="col">{{i.counts_exercises}}</th>
-                <th scope="col">{{i.sets_exercises}}</th>
-                <th scope="col">{{i.weight_exercises}}</th>
-            </tr>
-            </thead>
             
-        </table>
-    </div>
-    {% endfor %}
+        
+            <button class="w-100 btn btn-lg btn-secondary"  type="submit">Enter</button>
+          </form>
     
-    {% endblock %}</body></html>
+    
+    </div>
+    
+    

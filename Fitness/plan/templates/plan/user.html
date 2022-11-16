@@ -1,0 +1,30 @@
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      edit
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="{% url 'plan:delete_exercises' i.id %}">Delete</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+
+
+  {% endfor %}
+
+  <h1>Meals List</h1>
+  
+  {% for x in meals %}
+  
+  <div class="container">
+      
+          <table class="table">
+          <thead>
+          <tr>
+              <th scope="col">{{x.meal}}</th>
+              <th scope="col">{{x.colres}}</th>
+              
+          </tr>
+          </thead>
+ 
+      </table>

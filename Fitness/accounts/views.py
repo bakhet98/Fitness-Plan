@@ -41,4 +41,6 @@ def logout_user(request: HttpRequest):
 
     return redirect("plan:list_exercises")
 
+
+
     

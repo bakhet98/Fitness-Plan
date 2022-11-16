@@ -21,12 +21,66 @@
                 <th scope="col">{{i.counts_exercises}}</th>
                 <th scope="col">{{i.sets_exercises}}</th>
                 <th scope="col">{{i.weight_exercises}}</th>
+                <th>
+                      
+
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          edit
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'plan:delete_exercises' i.id %}">Delete</a></li>
+                          
+                        </ul>
+                      </div>
+
+                    </th>
+
             </tr>
             </thead>
             
         </table>
     </div>
     {% endfor %}
+
+    <h1>Meals List</h1>
+    
+    {% for x in meals %}
+    
+    <div class="container">
+        
+            <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">{{x.meal}}</th>
+                <th scope="col">{{x.colres}}</th>
+                <th>
+                      
+
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        edit
+                      </button>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'plan:delete_food' x.id %}">Delete</a></li>
+                        
+                      </ul>
+                    </div>
+
+                  </th>
+                
+            </tr>
+            </thead>
+   
+        </table>
+    
+</td>
+</tr></tbody>
+</table>
+
+    {% endfor %}
+</div>
+
 
 
     
